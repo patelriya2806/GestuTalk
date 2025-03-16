@@ -8,9 +8,14 @@ if not os.path.exists(DATA_DIR) :
 gestures = int(input('enter number of gestures to input :'))
 datasetSize = 200
 
-subfolders = [f for f in os.listdir(DATA_DIR) if os.path.isdir(os.path.join(DATA_DIR, f))]
+#subfolders = [f for f in os.listdir(DATA_DIR) if os.path.isdir(os.path.join(DATA_DIR, f))]
+#subfolders.sort()
+#last_subfolder = int(subfolders[-1]) + 1 if subfolders else 0
+
+subfolders = [int(f) for f in os.listdir(DATA_DIR) if os.path.isdir(os.path.join(DATA_DIR, f))]
 subfolders.sort()
-last_subfolder = int(subfolders[-1]) + 1 if subfolders else 0
+last_subfolder = subfolders[-1] + 1 if subfolders else 0
+
 
 gestures = gestures + last_subfolder
 
