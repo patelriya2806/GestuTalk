@@ -1,6 +1,5 @@
 import cv2
 import os
-import mediapipe as mp
 
 DATA_DIR = './data'
 if not os.path.exists(DATA_DIR) :
